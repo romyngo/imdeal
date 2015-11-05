@@ -18,11 +18,13 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
+grigio:babel
+fourseven:scss
 iron:router
 accounts-password
 accounts-google
 accounts-facebook
-useraccounts:bootstrap
 useraccounts:iron-routing
-twbs:bootstrap
 service-configuration
+axw:ratchet
+useraccounts:ratchet
