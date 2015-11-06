@@ -1,6 +1,10 @@
-<template name="chatItem">
+<template name="messageItem">
   <img src="{{picture}}" />
   <h2>{{name}}</h2>
+  {{#with getItemObject}}
+    <img src="{{picture}}" />
+    <h3>{{name}}</h3>
+  {{/with}}
   <p>{{lastMessage.text}}</p>
   <span class="last-message-timestamp">{{getFormattedDate}}</span>
   <span class="icon icon-right-nav"></span>

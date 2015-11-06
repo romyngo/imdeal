@@ -1,6 +1,6 @@
 'use strict';
 
-Template.chatItem.helpers({
+Template.messageItem.helpers({
 
   getFormattedDate() {
     const timestamp = Template.currentData().lastMessage.timestamp || moment();
@@ -11,6 +11,10 @@ Template.chatItem.helpers({
       lastWeek : 'dddd',
       sameElse : 'DD/MM/YY',
     });
+  },
+
+  getItemObject() {
+    return Items.findOne(Template.currentData().itemId);
   },
 
 });

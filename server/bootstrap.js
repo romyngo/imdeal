@@ -1,6 +1,9 @@
+'use strict';
+
 Meteor.startup(function() {
   if (Chats.find().count() === 0) {
     Messages.remove({});
+    Items.remove({});
 
     var messages = [
       {
@@ -52,11 +55,47 @@ Meteor.startup(function() {
       },
     ];
 
-    chats.forEach(chat => {
+    var items = [
+      {
+        name:        'Base ball',
+        askingPrice: 310,
+        location:    'New York',
+        picture:     'http://thecatapi.com/api/images/get?format=src&type=png',
+      },
+      {
+        name:        'iPhone 6 Plus',
+        askingPrice: 80040,
+        location:    'Melbourne',
+        picture:     'http://thecatapi.com/api/images/get?format=src&type=png',
+      },
+      {
+        name:        'Cat',
+        askingPrice: 40,
+        location:    'Hanoi',
+        picture:     'http://thecatapi.com/api/images/get?format=src&type=png',
+      },
+      {
+        name:        'Ice cream',
+        askingPrice: 200,
+        location:    'Antarctica',
+        picture:     'http://thecatapi.com/api/images/get?format=src&type=png',
+      },
+      {
+        name:        'Macbook Pro',
+        askingPrice: 309,
+        location:    'Taipei',
+        picture:     'http://thecatapi.com/api/images/get?format=src&type=png',
+      },
+    ];
+
+    for (var i = 0; i < items.length; i++) {
       let message = Messages.findOne({chatId: {$exists: false}});
-      chat.lastMessage = message;
-      let chatId = Chats.insert(chat);
+      chats[i].lastMessage = message;
+      let chatId = Chats.insert(chats[i]);
       Messages.update(message._id, {$set: {chatId: chatId}});
-    });
+
+      let itemId = Items.insert(items[i]);
+      Chats.update(chatId, {$set: {itemId: itemId}});
+    }
   }
 });
