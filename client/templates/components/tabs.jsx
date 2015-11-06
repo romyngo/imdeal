@@ -2,8 +2,8 @@
 
 Template.tabs.events({
 
-  'click a.tab-item': function(e) {
-    const target = $(e.target).closest('.tab-item');
+  'click a.tab-item': function(event) {
+    const target = $(event.target).closest('.tab-item');
     target.siblings().removeClass('active');
     target.addClass('active');
   },
