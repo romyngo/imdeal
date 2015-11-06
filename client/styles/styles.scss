@@ -1,0 +1,59 @@
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.hashtag {
+  font-weight: bold;
+}
+
+.caption {
+  text-align: justify;
+}
+
+.item {
+  display: table;
+  margin-bottom: 20px;
+
+  .item-header {
+    padding: 10px;
+    display: table;
+
+    .avatar {
+      display: table-cell;
+    }
+
+    .user {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10px;
+      width: 100%;
+
+      p {
+        margin-bottom: 0px;
+      }
+    }
+
+    .moment {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .item-body {
+
+    .product {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .item-footer {
+    padding: 10px;
+  }
+}
