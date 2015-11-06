@@ -2,4 +2,13 @@
   {{#contentFor "navTitle"}}
     <h1 class="title">Messages</h1>
   {{/contentFor}}
+
+  <div class="chats-list">
+    {{#each getOrderedChats}}
+      {{> chatItem}}
+    {{else}}
+      <p>No chats to show...</p>
+    {{/each}}
+  </div>
+
 </template>
