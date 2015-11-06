@@ -28,3 +28,4 @@ useraccounts:iron-routing
 service-configuration
 axw:ratchet
 useraccounts:ratchet
+momentjs:moment
