@@ -2,7 +2,7 @@
 
 Template.backBtn.events({
 
-  'click a.back-btn': function(event) {
+  'click button.back-btn': function(event) {
     event.preventDefault();
 
     history.back();
