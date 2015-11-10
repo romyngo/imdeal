@@ -1,0 +1,53 @@
+<template name="profile">
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Your Profile</h1>
+  {{/contentFor}}
+
+  <section class="statistics padding">
+    <div class="picture">
+      <img class="avatar" src="/img/75x75.png">
+    </div>
+    <div class="summary">
+      <div class="row">
+        <div class="column">
+          <h4>55</h4>
+
+          <p>posts</p>
+        </div>
+        <div class="column">
+          <h4>55</h4>
+
+          <p>followers</p>
+        </div>
+        <div class="column">
+          <h4>55</h4>
+
+          <p>following</p>
+        </div>
+      </div>
+      <div class="row">
+        <a class="btn btn-block edit-btn" href="#">Edit Profile</a>
+      </div>
+    </div>
+  </section>
+  <section class="about padding">
+    <p class="username">romy</p>
+
+    <p class="introduction">A trustworthy seller</p>
+  </section>
+
+  <section class="listing-grid">
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+    {{> listingCell}}
+  </section>
+</template>

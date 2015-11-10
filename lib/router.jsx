@@ -57,3 +57,20 @@ Router.route('/messages', {
     this.render();
   },
 });
+
+Router.route('/profile', {
+  name: 'profile',
+  template: 'profile',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});

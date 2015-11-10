@@ -1,26 +1,30 @@
 <template name="itemRow">
   <div class="item">
-    <div class="item-header">
-      <a href="#">
+    <div class="item-header padding">
+      <a class="user-picture" href="#">
         <img class="avatar" src="/img/50x50.png">
       </a>
 
-      <div class="user">
+      <div class="user-info">
         <p class="username"><a href="#">romyngo</a></p>
 
-        <p class="description">An trustworthy seller</p>
+        <p class="location">Hanoi</p>
       </div>
-
-      <p class="moment">2m</p>
+      <div class="created-at">
+        <p class="moment">2m</p>
+      </div>
     </div>
     <div class="item-body">
-      <img class="product" src="/img/360x360.png">
+      <img class="img-responsive thumbnail" src="/img/360x360.png">
+
+      <span class="overlay price">100000d</span>
+      <span class="overlay name">Cool Item</span>
     </div>
-    <div class="item-footer">
+    <div class="item-footer padding">
       <p class="category"><a class="hashtag" href="#">#category1</a> <a class="hashtag" href="#">#category2</a></p>
 
-      <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore. Lorem ipsum dolor sit amet.</p>
+      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore. Lorem ipsum dolor sit amet.</p>
     </div>
   </div>
 </template>

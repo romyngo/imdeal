@@ -3,12 +3,16 @@
     <h1 class="title">Messages</h1>
   {{/contentFor}}
 
-  <div class="chats-list">
-    {{#each getOrderedChats}}
-      {{> messageItem}}
-    {{else}}
-      <p>No chats to show...</p>
-    {{/each}}
+  {{#contentFor "navButtonRight"}}
+    <button class="btn btn-link btn-nav pull-right edit-btn">
+      Edit
+    </button>
+  {{/contentFor}}
+
+  <div class="message-list">
+    {{> messageRow}}
+    {{> messageRow}}
+    {{> messageRow}}
   </div>
 
 </template>

@@ -1,6 +1,39 @@
+// Fixed ratchet's bug
+.bar-tab ~ .content {
+  bottom: 50px;
+  padding-bottom: 0;
+}
+
+.bar-nav ~ .content {
+  top: 44px;
+  padding-top: 0;
+}
+
+// Overriding default
+h1, h2, h3, h4, h5, p {
+  margin-bottom: 0;
+}
+
+// Grid
+.row {
+  display: flex;
+}
+
+.row + .row {
+ margin-top: 5px;
+}
+
+.column {
+  flex: 1 1 auto;
+}
+
+// Padding
+.padding {
+  padding: 10px;
+}
+
+// Reusable classes
 .avatar {
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
 }
 
@@ -12,53 +45,146 @@
   font-weight: bold;
 }
 
-.caption {
-  text-align: justify;
+.overlay {
+  position: absolute;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
+.img-responsive {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+// Feed
 .item-list {
 
   .item {
     margin-bottom: 20px;
 
     .item-header {
-      padding: 10px;
       display: table;
 
-      .avatar {
+      .user-picture {
         display: table-cell;
+        vertical-align: middle;
+
+        .avatar {
+          width: 50px;
+          height: 50px;
+        }
       }
 
-      .user {
+      .user-info {
         display: table-cell;
         vertical-align: middle;
         padding-left: 10px;
         width: 100%;
-
-        p {
-          margin-bottom: 0px;
-        }
       }
 
-      .moment {
+      .created-at {
         display: table-cell;
         vertical-align: middle;
       }
     }
 
     .item-body {
+      position: relative;
 
-      .product {
-        max-width: 100%;
-        display: block;
-        margin: auto;
+      .price {
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      .name {
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
       }
     }
 
     .item-footer {
-      padding: 10px;
+      .description {
+        text-align: justify;
+      }
     }
   }
 }
 
 
+// Profile
+.statistics {
+  display: table;
+
+  .picture {
+    display: table-cell;
+    vertical-align: top;
+
+    .avatar {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .summary {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+    padding-left: 20px;
+    text-align: center;
+
+    .edit-btn {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+}
+
+.about {
+  padding-top: 0;
+}
+
+
+// Listing
+.listing-grid {
+
+  .item {
+    float: left;
+    width: 33%;
+    margin: 1px 0;
+
+    &:nth-child(3n+2) {
+      margin: 1px;
+    }
+  }
+}
+
+// Message
+.message-list {
+  .item {
+    display: table;
+    border-bottom: 1px solid #DDD;
+
+    .user {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .message {
+      display: table-cell;
+      width: 100%;
+      vertical-align: top;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .product {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+}

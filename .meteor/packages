@@ -29,3 +29,4 @@ service-configuration
 axw:ratchet
 useraccounts:ratchet
 momentjs:moment
+fortawesome:fontawesome
