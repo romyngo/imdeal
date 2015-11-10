@@ -1,0 +1,24 @@
+<template name="tabs">
+  <nav class="bar bar-tab">
+    <a class="tab-item active" href="{{pathFor route='feed'}}">
+      <i class="icon fa fa-home"></i>
+      <span class="tab-label">Feed</span>
+    </a>
+    <a class="tab-item" href="{{pathFor route='discovery'}}">
+      <i class="icon fa fa-search"></i>
+      <span class="tab-label">Discovery</span>
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon fa fa-camera"></i>
+      <span class="tab-label">Sell</span>
+    </a>
+    <a class="tab-item" href="{{pathFor route='messages'}}">
+      <i class="icon fa fa-comments-o"></i>
+      <span class="tab-label">Messages</span>
+    </a>
+    <a class="tab-item" href="{{pathFor route='profile'}}">
+      <i class="icon fa fa-user"></i>
+      <span class="tab-label">Profile</span>
+    </a>
+  </nav>
+</template>
