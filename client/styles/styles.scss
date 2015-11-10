@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .row + .row {
- margin-top: 5px;
+  margin-top: 5px;
 }
 
 .column {
@@ -120,7 +120,6 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-
 // Profile
 .statistics {
   display: table;
@@ -153,7 +152,6 @@ h1, h2, h3, h4, h5, p {
   padding-top: 0;
 }
 
-
 // Listing
 .listing-grid {
 
@@ -177,6 +175,11 @@ h1, h2, h3, h4, h5, p {
     .user {
       display: table-cell;
       vertical-align: top;
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     .message {
@@ -190,6 +193,57 @@ h1, h2, h3, h4, h5, p {
     .product {
       display: table-cell;
       vertical-align: top;
+
+      .thumbnail {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.message-list {
+
+  .item {
+    display: table;
+
+    .user {
+      display: table-cell;
+      vertical-align: top;
+      min-width: 50px;
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .message {
+      padding-left: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+
+      .bubble {
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+        border-radius: 10px;
+
+        .moment {
+          text-align: right;
+        }
+      }
+    }
+
+    .me {
+      display: table-cell;
+      vertical-align: bottom;
+      min-width: 50px;
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }

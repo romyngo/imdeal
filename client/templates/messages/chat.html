@@ -1,0 +1,23 @@
+<template name="chat">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Chat</h1>
+  {{/contentFor}}
+
+  {{#contentFor "navButtonRight"}}
+    <button class="btn btn-link btn-nav pull-right edit-btn">
+      Edit
+    </button>
+  {{/contentFor}}
+
+  <div class="content">
+    <div class="message-list">
+      {{> messageRow}}
+      {{> messageRow}}
+      {{> messageRow}}
+    </div>
+  </div>
+</template>

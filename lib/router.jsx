@@ -58,6 +58,24 @@ Router.route('/chats', {
   },
 });
 
+Router.route('/chat', {
+  name: 'chat',
+  template: 'chat',
+  layoutTemplate: 'layoutNoTab',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
 Router.route('/profile', {
   name: 'profile',
   template: 'profile',
