@@ -1,6 +1,6 @@
-<template name="messages">
+<template name="chats">
   {{#contentFor "navTitle"}}
-    <h1 class="title">Messages</h1>
+    <h1 class="title">Chats</h1>
   {{/contentFor}}
 
   {{#contentFor "navButtonRight"}}
@@ -9,13 +9,13 @@
     </button>
   {{/contentFor}}
 
-  {{> messageTabs}}
+  {{> chatTabs}}
 
   <div class="content">
-    <div class="message-list">
-      {{> messageRow}}
-      {{> messageRow}}
-      {{> messageRow}}
+    <div class="chat-list">
+      {{> chatRow}}
+      {{> chatRow}}
+      {{> chatRow}}
     </div>
 
   </div>

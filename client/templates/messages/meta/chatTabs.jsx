@@ -1,6 +1,6 @@
 'use strict';
 
-Template.messageTabs.events({
+Template.chatTabs.events({
   'click .control-item': function(event) {
     const target = $(event.target);
     target.siblings().removeClass('active');

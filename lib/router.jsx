@@ -41,9 +41,9 @@ Router.route('/discovery', {
   },
 });
 
-Router.route('/messages', {
-  name: 'messages',
-  template: 'messages',
+Router.route('/chats', {
+  name: 'chats',
+  template: 'chats',
 
   waitOn() {
 
@@ -77,5 +77,5 @@ Router.route('/profile', {
 
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
-  only: ['feed', 'messages', 'profile'],
+  only: ['feed', 'chats', 'profile'],
 });
