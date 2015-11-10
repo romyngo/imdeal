@@ -14,6 +14,11 @@
   padding-top: 0;
 }
 
+.bar-footer ~ .content {
+  bottom: 44px;
+  padding-bottom: 0;
+}
+
 // Overriding default
 h1, h2, h3, h4, h5, p {
   margin-bottom: 0;
@@ -227,7 +232,7 @@ h1, h2, h3, h4, h5, p {
       .bubble {
         border: 1px solid #ddd;
         padding: 5px 10px;
-        border-radius: 10px;
+        border-radius: 5px;
 
         .moment {
           text-align: right;
