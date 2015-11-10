@@ -74,3 +74,8 @@ Router.route('/profile', {
     this.render();
   },
 });
+
+// Use iron-routing package to protect routes from logged out users
+Router.plugin('ensureSignedIn', {
+  only: ['feed', 'messages', 'profile'],
+});
