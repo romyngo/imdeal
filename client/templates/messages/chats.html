@@ -13,9 +13,9 @@
 
   <div class="content">
     <div class="chat-list">
-      {{> chatRow}}
-      {{> chatRow}}
-      {{> chatRow}}
+      {{#each getOrderedChats}}
+        {{> chatRow this}}
+      {{/each}}
     </div>
 
   </div>

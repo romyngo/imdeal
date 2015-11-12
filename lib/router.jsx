@@ -95,5 +95,5 @@ Router.route('/profile', {
 
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
-  only: ['feed', 'chats', 'profile'],
+  only: ['chats', 'profile'],
 });
