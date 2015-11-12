@@ -11,7 +11,7 @@ Accounts.onCreateUser((options, user) => {
   if (user.services.password) {
     user.profile = {
       email: options.email,
-      avatar: comnstants.DEF_AVATAR,
+      avatar: constants.DEF_AVATAR,
     };
 
     user.emails = [
