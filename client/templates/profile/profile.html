@@ -6,22 +6,22 @@
   <div class="content">
     <section class="statistics padding">
       <div class="picture">
-        <img class="avatar" src="/img/75x75.png">
+        <img class="avatar" src="{{currentUser.profile.avatar}}">
       </div>
       <div class="summary">
         <div class="row">
           <div class="column">
-            <h4>55</h4>
+            <h4>{{currentUser.numPosts}}</h4>
 
             <p>posts</p>
           </div>
           <div class="column">
-            <h4>55</h4>
+            <h4>{{currentUser.numFollowers}}</h4>
 
             <p>followers</p>
           </div>
           <div class="column">
-            <h4>55</h4>
+            <h4>{{currentUser.numFollowing}}</h4>
 
             <p>following</p>
           </div>
@@ -32,24 +32,15 @@
       </div>
     </section>
     <section class="about padding">
-      <p class="username">romy</p>
+      <p class="username">{{currentUser.username}}</p>
 
-      <p class="introduction">A trustworthy seller</p>
+      <p class="introduction">{{currentUser.profile.intro}}</p>
     </section>
 
     <section class="listing-grid">
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
-      {{> listingCell}}
+      {{#each getOrderedListings}}
+        {{> listingCell this}}
+      {{/each}}
     </section>
   </div>
 </template>
