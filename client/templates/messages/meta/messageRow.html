@@ -1,16 +1,17 @@
 <template name="messageRow">
   <div class="item padding">
     <div class="user">
-      <img class="avatar" src="/img/50x50.png">
+      {{#if message.userFrom}}
+        <img class="avatar" src="{{fromUser.avatar}}">
+      {{else}}
+        <img class="avatar" src="{{toUser.avatar}}">
+      {{/if}}
     </div>
     <div class="message">
       <div class="bubble">
-        <p class="body">I'm interested</p>
-        <p class="moment">2m</p>
+        <p class="body">{{message.text}}</p>
+        <p class="moment">{{getFormattedTimestamp message.timestamp}}</p>
       </div>
-    </div>
-    <div class="me">
-
     </div>
   </div>
 </template>
