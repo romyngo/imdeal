@@ -19,6 +19,10 @@
   padding-bottom: 0;
 }
 
+.toggle {
+  cursor: pointer;
+}
+
 // Overriding default
 h1, h2, h3, h4, h5, p {
   margin-bottom: 0;
@@ -250,5 +254,48 @@ h1, h2, h3, h4, h5, p {
         height: 50px;
       }
     }
+  }
+}
+
+.item-upload {
+
+  .item-basic {
+    display: table;
+
+    .image {
+      display: table-cell;
+      vertical-align: top;
+
+      .thumbnail {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .name {
+      padding-left: 10px;
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+  .item-optional {
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .item-social-share {
+    .icon {
+      width: 30px;
+      font-size: 20px;
+    }
+  }
+
+  input, textarea {
+    padding: 0;
+  }
+
+  .label {
+    padding-bottom: 10px;
   }
 }

@@ -1,0 +1,57 @@
+<template name="upload">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">List Your Item</h1>
+  {{/contentFor}}
+
+
+  <div class="bar bar-standard bar-footer">
+    <button type="submit" class="btn btn-positive btn-block">SUBMIT</button>
+  </div>
+
+  <div class="content">
+    <form class="input-group">
+      <div class="item-upload">
+        <div class="item-basic padding">
+          <div class="image">
+            <a href="#" class="photo-upload-btn">
+              <img class="img-responsive thumbnail" src="{{ getImage }}">
+            </a>
+          </div>
+          <div class="name">
+            <h4 class="label">Basic Information</h4>
+            <input type="text" name="name" placeholder="Enter item name">
+            <input type="number" name="price" placeholder="Enter price">
+          </div>
+        </div>
+        <div class="item-optional padding">
+          <h4 class="label">Optional Information</h4>
+          <textarea name="category" placeholder="Enter hashtags" rows="2"></textarea>
+          <textarea name="description" placeholder="Enter description" rows="5"></textarea>
+        </div>
+        <div class="item-social-share padding">
+          <h4 class="label">Share</h4>
+          <ul class="table-view">
+            <li class="table-view-cell">
+              <i class="icon fa fa-facebook"></i>
+              Facebook
+              <div class="toggle active">
+                <div class="toggle-handle"></div>
+              </div>
+            </li>
+            <li class="table-view-cell">
+              <i class="icon fa fa-instagram"></i>
+              Instagram
+              <div class="toggle active">
+                <div class="toggle-handle"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</template>

@@ -93,6 +93,24 @@ Router.route('/profile', {
   },
 });
 
+Router.route('/upload', {
+  name: 'upload',
+  template: 'upload',
+  layoutTemplate: 'layoutNoTab',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
   only: ['feed', 'chats', 'profile'],

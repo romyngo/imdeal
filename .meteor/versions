@@ -54,9 +54,11 @@ iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
 launch-screen@1.0.4
+less@2.5.1
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
+mdg:camera@1.1.5
 meteor@1.1.10
 meteor-base@1.0.1
 minifiers@1.1.7
@@ -71,6 +73,7 @@ npm-mongo@1.4.39_1
 oauth@1.1.6
 oauth2@1.1.5
 observe-sequence@1.0.7
+okland:camera-ui@0.0.2
 ordered-dict@1.0.4
 promise@0.5.1
 random@1.0.5

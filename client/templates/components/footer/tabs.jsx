@@ -7,4 +7,5 @@ Template.tabs.events({
     target.siblings().removeClass('active');
     target.addClass('active');
   },
+
 });
