@@ -22,7 +22,7 @@
 
   <div class="content">
     <div class="message-list">
-      {{#each getOrderedMessages}}
+      {{#each getLimitedMessages}}
         {{> messageRow message=this fromUser=(getUserData ../chat.fromUserId) toUser=(getUserData ../chat.toUserId) }}
       {{/each}}
     </div>
