@@ -21,4 +21,11 @@ Template.chatRow.helpers({
     };
   },
 
+  // Returns the most recent message from list of messages
+  getLastMessage() {
+    const messages = Template.currentData().chat.messages;
+    // Messages array is assumed to be ordered, hence last element will be most recent
+    return messages[messages.length - 1];
+  },
+
 });
