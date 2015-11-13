@@ -5,7 +5,7 @@ AccountsTemplates.configureRoute('signIn', {
   path: '/login',
   template: 'auth',
   layoutTemplate: 'layoutNoTab',
-  redirect: 'main',
+  redirect: 'feed',
 });
 
 AccountsTemplates.configureRoute('signUp', {
@@ -13,7 +13,7 @@ AccountsTemplates.configureRoute('signUp', {
   path: '/register',
   template: 'auth',
   layoutTemplate: 'layoutNoTab',
-  redirect: 'main',
+  redirect: 'feed',
 });
 
 AccountsTemplates.configure({

@@ -24,6 +24,24 @@ Router.route('/', {
   },
 });
 
+Router.route('/item', {
+  name: 'item',
+  template: 'item',
+  layoutTemplate: 'layoutNoTab',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
 Router.route('/discovery', {
   name: 'discovery',
   template: 'discovery',
@@ -115,5 +133,5 @@ Router.route('/upload', {
 
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
-  only: ['chats', 'profile'],
+  only: ['upload', 'chats', 'profile'],
 });

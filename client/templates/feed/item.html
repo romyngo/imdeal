@@ -1,0 +1,19 @@
+<template name="item">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Item</h1>
+  {{/contentFor}}
+
+  <div class="bar bar-standard bar-footer">
+    <button class="btn btn-positive btn-block chat-btn">Enter Chat</button>
+  </div>
+
+  <div class="content">
+    <div class="item-list">
+      {{> itemRow}}
+    </div>
+  </div>
+</template>
