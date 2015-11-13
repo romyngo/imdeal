@@ -3,8 +3,6 @@
     <div class="user">
       {{#if message.userFrom}}
         <img class="avatar" src="{{fromUser.avatar}}">
-      {{else}}
-        <img class="avatar" src="{{toUser.avatar}}">
       {{/if}}
     </div>
     <div class="message">
@@ -12,6 +10,11 @@
         <p class="body">{{message.text}}</p>
         <p class="moment">{{getFormattedTimestamp message.timestamp}}</p>
       </div>
+    </div>
+    <div class="me">
+      {{#unless message.userFrom}}
+        <img class="avatar" src="{{toUser.avatar}}">
+      {{/unless}}
     </div>
   </div>
 </template>
