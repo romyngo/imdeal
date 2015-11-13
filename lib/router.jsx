@@ -113,6 +113,23 @@ Router.route('/profile', {
   },
 });
 
+Router.route('/settings', {
+  name: 'settings',
+  template: 'settings',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
 Router.route('/upload', {
   name: 'upload',
   template: 'upload',

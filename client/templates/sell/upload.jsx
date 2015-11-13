@@ -17,6 +17,7 @@ Template.upload.onCreated(function() {
 
 Template.upload.events({
   'click .toggle': function(event) {
+    event.preventDefault();
     $(event.target).closest('.toggle').toggleClass('active');
   },
 

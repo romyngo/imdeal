@@ -1,0 +1,43 @@
+<template name="settings">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Settings</h1>
+  {{/contentFor}}
+
+  <div class="content">
+    <ul class="table-view">
+      <li class="table-view-cell table-view-divider">Account</li>
+      <li class="table-view-cell">
+        <a href="#" class="navigate-right profile-btn">
+          <i class="icon fa fa-pencil-square-o"></i>
+          Update Profile
+        </a>
+      </li>
+      <li class="table-view-cell">
+        <a href="#" class="navigate-right logout-btn">
+          <i class="icon fa fa-sign-out"></i>
+          Logout
+        </a>
+      </li>
+      <li class="table-view-cell table-view-divider">Automatic Sharing</li>
+      <li class="table-view-cell">
+        <i class="icon fa fa-facebook"></i>
+        Facebook
+        <div class="toggle">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+      <li class="table-view-cell">
+        <i class="icon fa fa-instagram"></i>
+        Instagram
+        <div class="toggle">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</template>

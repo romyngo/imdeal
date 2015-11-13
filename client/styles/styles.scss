@@ -71,6 +71,13 @@ h1, h2, h3, h4, h5, p {
   margin: auto;
 }
 
+.table-view-cell {
+  .icon {
+    width: 30px;
+    font-size: 20px;
+  }
+}
+
 // Feed
 .item-list {
 
@@ -281,13 +288,6 @@ h1, h2, h3, h4, h5, p {
   .item-optional {
     textarea {
       resize: vertical;
-    }
-  }
-
-  .item-social-share {
-    .icon {
-      width: 30px;
-      font-size: 20px;
     }
   }
 
