@@ -15,15 +15,16 @@
 
   <div class="bar bar-standard bar-footer">
     <form>
-      <input placeholder="Chat" type="search">
+      <input placeholder="Your reply..." type="search">
+      <input type="submit" value="Send">
     </form>
   </div>
 
   <div class="content">
     <div class="message-list">
-      {{> messageRow}}
-      {{> messageRow}}
-      {{> messageRow}}
+      {{#each getOrderedMessages}}
+        {{> messageRow message=this fromUser=(getUserData ../chat.fromUserId) toUser=(getUserData ../chat.toUserId) }}
+      {{/each}}
     </div>
   </div>
 </template>

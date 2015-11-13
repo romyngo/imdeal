@@ -58,7 +58,7 @@ Router.route('/chats', {
   },
 });
 
-Router.route('/chat', {
+Router.route('/chat/:_id', {
   name: 'chat',
   template: 'chat',
   layoutTemplate: 'layoutNoTab',
@@ -68,7 +68,9 @@ Router.route('/chat', {
   },
 
   data() {
-
+    return {
+      chat: Chats.findOne(this.params._id),
+    };
   },
 
   action() {
@@ -113,5 +115,5 @@ Router.route('/upload', {
 
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
-  only: ['feed', 'chats', 'profile'],
+  only: ['chats', 'profile'],
 });
