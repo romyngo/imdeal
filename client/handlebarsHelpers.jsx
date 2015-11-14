@@ -9,3 +9,7 @@ UI.registerHelper('getFormattedTimestamp', function(timestamp = moment() : Date)
     sameElse : 'DD/MM/YY',
   });
 });
+
+UI.registerHelper('getUserAvatar', function(user : Object) {
+  return user.profile.avatar ? user.profile.avatar : '/img/no_avatar.png';
+});
