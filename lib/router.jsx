@@ -96,8 +96,8 @@ Router.route('/chat/:_id', {
   },
 });
 
-Router.route('/profile', {
-  name: 'profile',
+Router.route('/profile/view', {
+  name: 'profile.view',
   template: 'profile',
 
   waitOn() {
@@ -116,6 +116,25 @@ Router.route('/profile', {
 Router.route('/settings', {
   name: 'settings',
   template: 'settings',
+  layoutTemplate: 'layoutNoTab',
+  
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
+Router.route('/profile/update', {
+  name: 'profile.update',
+  template: 'profileUpdate',
+  layoutTemplate: 'layoutNoTab',
 
   waitOn() {
 
