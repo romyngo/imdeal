@@ -1,191 +1,91 @@
 'use strict';
 
-// Default layout configuration
+// Default layouts configuration
 Router.configure({
-  layoutTemplate: 'layout',
-  loadingTemplate: 'loading',
+  layoutTemplate:   'layout',
+  loadingTemplate:  'loading',
   notFoundTemplate: 'notFound',
 });
 
+// Default rendering function for most routes
+function defaultRender() {
+  this.render();
+}
+
+// Definitions for all routes
 Router.route('/', {
-  name: 'feed',
-  template: 'feed',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-Router.route('/item', {
-  name: 'item',
-  template: 'item',
-  layoutTemplate: 'layoutNoTab',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
+  name:           'feed',
+  template:       'feed',
+  action:         defaultRender,
 });
 
 Router.route('/discovery', {
-  name: 'discovery',
-  template: 'discovery',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
+  name:           'discovery',
+  template:       'discovery',
+  action:         defaultRender,
 });
 
 Router.route('/chats', {
-  name: 'chats',
-  template: 'chats',
+  name:           'chats',
+  template:       'chats',
+  action:         defaultRender,
+});
 
-  waitOn() {
+Router.route('/profile', {
+  name:           'profile',
+  template:       'profile',
+  action:         defaultRender,
+});
 
-  },
+Router.route('/settings', {
+  name:           'settings',
+  template:       'settings',
+  action:         defaultRender,
+});
 
+Router.route('/upload', {
+  name:           'upload',
+  template:       'upload',
+  layoutTemplate: 'layoutNoTab',
+  action:         defaultRender,
+});
+
+Router.route('/crop', {
+  name:           'crop',
+  template:       'crop',
+  layoutTemplate: 'layoutNoTab',
+  action:         defaultRender,
+});
+
+Router.route('/item/:_id', {
+  name:           'item',
+  template:       'item',
+  layoutTemplate: 'layoutNoTab',
+  action:         defaultRender,
   data() {
-
-  },
-
-  action() {
-    this.render();
+    return {
+      item: Items.findOne(this.params._id),
+    };
   },
 });
 
 Router.route('/chat/:_id', {
-  name: 'chat',
-  template: 'chat',
+  name:           'chat',
+  template:       'chat',
   layoutTemplate: 'layoutNoTab',
-
-  waitOn() {
-
-  },
-
+  action:         defaultRender,
   data() {
     return {
       chat: Chats.findOne(this.params._id),
     };
   },
-
-  action() {
-    this.render();
-  },
 });
 
-Router.route('/profile/view', {
-  name: 'profile.view',
-  template: 'profile',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-Router.route('/settings', {
-  name: 'settings',
-  template: 'settings',
-  layoutTemplate: 'layoutNoTab',
-  
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-Router.route('/profile/update', {
-  name: 'profile.update',
-  template: 'profileUpdate',
-  layoutTemplate: 'layoutNoTab',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-Router.route('/upload', {
-  name: 'upload',
-  template: 'upload',
-  layoutTemplate: 'layoutNoTab',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-Router.route('/crop', {
-  name: 'crop',
-  template: 'crop',
-  layoutTemplate: 'layoutNoTab',
-
-  waitOn() {
-
-  },
-
-  data() {
-
-  },
-
-  action() {
-    this.render();
-  },
-});
-
-// Use iron-routing package to protect routes from logged out users
+// Use iron-routing package to protect certain routes from logged out users
 Router.plugin('ensureSignedIn', {
-  only: ['upload', 'chats', 'profile'],
+  only: [
+    'upload',
+    'chats',
+    'profile',
+  ],
 });
