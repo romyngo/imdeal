@@ -13,7 +13,7 @@
   <div class="content">
     <section class="statistics padding">
       <div class="picture">
-        <img class="avatar" src="{{currentUser.profile.avatar}}">
+        <img class="avatar" src="{{ getUserAvatar currentUser}}">
       </div>
       <div class="summary">
         <div class="row">
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="row">
-          <a class="btn btn-block edit-btn" href="#">Edit Profile</a>
+          <a class="btn btn-block edit-btn" href="{{pathFor route='profile.update'}}">Edit Profile</a>
         </div>
       </div>
     </section>

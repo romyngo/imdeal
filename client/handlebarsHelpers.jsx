@@ -13,3 +13,7 @@ UI.registerHelper('getFormattedTimestamp', function(timestamp = moment() : Date)
 UI.registerHelper('getFormattedPrice', function(price: int) {
   return parseFloat(price / 100).toFixed(2);
 });
+
+UI.registerHelper('getUserAvatar', function(user : Object) {
+  return user.profile.avatar ? user.profile.avatar : '/img/no_avatar.png';
+});

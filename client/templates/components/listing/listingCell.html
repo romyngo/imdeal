@@ -1,7 +1,7 @@
 <template name="listingCell">
-  <div class="item">
+  <a href="{{pathFor route='item' _id=item._id }}" class="item">
     <img class="img-responsive" src="{{item.picture}}">
-    <p>{{item.name}}</p>
-    <p>$ {{getFormattedPrice item.askingPrice}}</p>
-  </div>
+    <span class="overlay price">$ {{getFormattedPrice item.askingPrice}}</span>
+    <span class="overlay name">{{item.name}}</span>
+  </a>
 </template>
