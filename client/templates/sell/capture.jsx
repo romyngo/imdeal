@@ -1,6 +1,6 @@
 'use strict';
 
-Template.crop.onCreated(function() {
+Template.capture.onCreated(function() {
   const originalImage = Session.get('originalImage');
 
   if (!originalImage) {
@@ -8,7 +8,7 @@ Template.crop.onCreated(function() {
   }
 });
 
-Template.crop.onRendered(function() {
+Template.capture.onRendered(function() {
   $('.crop-layer').draggable({
     addClass: false,
     containment: 'parent',
@@ -16,14 +16,14 @@ Template.crop.onRendered(function() {
 });
 
 
-Template.crop.events({
+Template.capture.events({
   'click button.retake-btn': function(event) {
     event.preventDefault();
     uploadPhoto(360, 360, 100);
   },
 });
 
-Template.crop.helpers({
+Template.capture.helpers({
   getSessionImage() {
     const originalImage = Session.get('originalImage');
 

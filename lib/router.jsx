@@ -50,9 +50,9 @@ Router.route('/upload', {
   action:         defaultRender,
 });
 
-Router.route('/crop', {
-  name:           'crop',
-  template:       'crop',
+Router.route('/capture', {
+  name:           'capture',
+  template:       'capture',
   layoutTemplate: 'layoutNoTab',
   action:         defaultRender,
 });
