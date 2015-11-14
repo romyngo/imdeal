@@ -6,7 +6,9 @@
   <div class="content">
     <div class="item-list">
     {{#each getFollowerListings}}
-      {{> itemRow item=this}}
+      <a href="{{pathFor route='item'}}">
+        {{> itemRow item=this}}
+      </a>
     {{else}}
       You haven't followed anyone
     {{/each}}
