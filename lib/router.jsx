@@ -93,6 +93,9 @@ Router.plugin('ensureSignedIn', {
   only: [
     'upload',
     'chats',
-    'profile',
+    'chat',
+    'profile.view',
+    'profile.edit',
+    'settings',
   ],
 });
