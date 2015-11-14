@@ -36,6 +36,38 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
+.table-view-cell-input {
+  display: table;
+
+  .label {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .input {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+
+    input, select {
+      margin: 0;
+      padding: 0 10px;
+      border: none;
+      border-radius: 0;
+      height: 21px;
+      line-height: 21px;
+
+    }
+
+    select {
+      background: none;
+      box-shadow: none;
+      font-size: 17px;
+      padding: 0 10px 0 5px;
+    }
+  }
+}
+
 // Grid
 .row {
   display: flex;
@@ -345,53 +377,24 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
-.profile-form {
-  .fieldset {
-    padding: 10px;
+.update-avatar {
+  position: relative;
+  width: 75px;
+  display: block;
+  margin: 10px auto;
 
-    .legend {
-      padding-bottom: 10px;
-    }
+  .avatar {
+    width: 70px;
+    height: 75px;
+    display: block;
   }
 
-  .profile-name-avatar {
-    display: table;
-
-    .name {
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-      padding-right: 20px;
-    }
-
-    .image {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-
-      .avatar {
-        width: 50px;
-        height: 50px;
-      }
-    }
+  .overlay {
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
   }
-
-  .input-area {
-    display: table;
-
-    .label {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    .input {
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-  }  
 }
