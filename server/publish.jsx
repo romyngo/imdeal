@@ -9,6 +9,8 @@ Meteor.publish(null, function() {
       numPosts:     1,
       listings:     1,
       following:    1,
+      'settings.facebookShare':  1,
+      'settings.instagramShare': 1,
     },
   });
 });

@@ -26,16 +26,28 @@
       <li class="table-view-cell">
         <i class="fa-icon fa fa-facebook"></i>
         Facebook
-        <div class="toggle">
-          <div class="toggle-handle"></div>
-        </div>
+        {{#if currentUser.settings.facebookShare}}
+          <div class="toggle active toggle-facebook">
+            <div class="toggle-handle"></div>
+          </div>
+        {{else}}
+          <div class="toggle toggle-facebook">
+            <div class="toggle-handle"></div>
+          </div>
+        {{/if}}
       </li>
       <li class="table-view-cell">
         <i class="fa-icon fa fa-instagram"></i>
         Instagram
-        <div class="toggle">
-          <div class="toggle-handle"></div>
-        </div>
+        {{#if currentUser.settings.instagramShare}}
+          <div class="toggle active toggle-instagram">
+            <div class="toggle-handle"></div>
+          </div>
+        {{else}}
+          <div class="toggle toggle-instagram">
+            <div class="toggle-handle"></div>
+          </div>
+        {{/if}}
       </li>
     </ul>
   </div>
