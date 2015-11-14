@@ -12,13 +12,9 @@ Template.chat.helpers({
     };
   },
 
-  // Returns message log in order
-  getOrderedMessages(limit = 10 : number) {
-    const orderedMessages = _.chain(Template.currentData().chat.messages)
-                             .sortBy((message) => message.timestamp)
-                             .value();
-
-    return orderedMessages.splice(0, limit);
+  // Returns all messages of this chat, limited to amount specified
+  getLimitedMessages(limit = 10 : number) {
+    return Template.currentData().chat.messages.splice(0, limit);
   },
 
 });

@@ -7,8 +7,10 @@
 
       <div class="message">
         <p class="username">{{user.username}}</p>
-        <p class="body">{{chat.lastMessage.text}}</p>
-        <p class="time">{{getFormattedTimestamp chat.lastMessage.timestamp}}</p>
+        {{#with getLastMessage}}
+          <p class="body">{{this.text}}</p>
+          <p class="time">{{getFormattedTimestamp this.timestamp}}</p>
+        {{/with}}
       </div>
 
       {{#with item=(getItemData chat.itemId)}}

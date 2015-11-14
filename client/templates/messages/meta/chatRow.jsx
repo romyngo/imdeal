@@ -21,14 +21,12 @@ Template.chatRow.helpers({
     };
   },
 
-  // Returns timestamp based on the difference from current time
-  getFormattedTimestamp(timestamp = moment() : Date) {
-    return moment(timestamp).calendar(null, {
-      lastDay :  '[Yesterday]',
-      sameDay :  'LT',
-      lastWeek : 'dddd',
-      sameElse : 'DD/MM/YY',
-    });
+  // Returns the most recent message from list of messages
+  getLastMessage() {
+    const messages = Template.currentData().chat.messages || [{}];
+
+    // Messages array is assumed to be ordered, hence last element will be most recent
+    return _.last(messages);
   },
 
 });
