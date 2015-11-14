@@ -5,10 +5,11 @@
 
   <div class="content">
     <div class="item-list">
-      {{> itemRow}}
-      {{> itemRow}}
-      {{> itemRow}}
-      {{> itemRow}}
+    {{#each getFollowerListings}}
+      {{> itemRow item=this}}
+    {{else}}
+      You haven't followed anyone
+    {{/each}}
     </div>
   </div>
 </template>
