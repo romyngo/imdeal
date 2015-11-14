@@ -41,22 +41,25 @@ h1, h2, h3, h4, h5, p {
 
   .label {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
   }
 
   .input {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     width: 100%;
 
-    input, select {
+    input, select, textarea {
       margin: 0;
       padding: 0 10px;
       border: none;
       border-radius: 0;
       height: 21px;
       line-height: 21px;
+    }
 
+    textarea {
+      height: auto;
     }
 
     select {
@@ -315,44 +318,6 @@ h1, h2, h3, h4, h5, p {
     }
   }
 }
-
-.item-upload {
-
-  .item-basic {
-    display: table;
-
-    .image {
-      display: table-cell;
-      vertical-align: top;
-
-      .thumbnail {
-        width: 100px;
-        height: 100px;
-      }
-    }
-    .name {
-      padding-left: 10px;
-      display: table-cell;
-      vertical-align: top;
-      width: 100%;
-    }
-  }
-
-  .item-optional {
-    textarea {
-      resize: vertical;
-    }
-  }
-
-  input, textarea {
-    padding: 0;
-  }
-
-  .label {
-    padding-bottom: 10px;
-  }
-}
-
 .canvas {
   position: relative;
   overflow: hidden;
@@ -374,6 +339,15 @@ h1, h2, h3, h4, h5, p {
     top: 0;
     cursor: move;
     box-shadow: 0 0 0 999px rgba(0,0,0,0.5);
+  }
+}
+
+.upload-item-photo {
+  margin: 10px;
+
+  .thumbnail {
+    height: 100px;
+    width: 100px;
   }
 }
 
