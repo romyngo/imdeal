@@ -148,6 +148,24 @@ Router.route('/upload', {
   },
 });
 
+Router.route('/crop', {
+  name: 'crop',
+  template: 'crop',
+  layoutTemplate: 'layoutNoTab',
+
+  waitOn() {
+
+  },
+
+  data() {
+
+  },
+
+  action() {
+    this.render();
+  },
+});
+
 // Use iron-routing package to protect routes from logged out users
 Router.plugin('ensureSignedIn', {
   only: ['upload', 'chats', 'profile'],

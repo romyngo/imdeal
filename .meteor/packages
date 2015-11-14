@@ -32,3 +32,4 @@ momentjs:moment
 fortawesome:fontawesome
 okland:camera-ui
 reactive-var
+dbernhard:jquery-ui-draggable

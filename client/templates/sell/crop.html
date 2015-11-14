@@ -1,0 +1,24 @@
+<template name="crop">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Crop Your Photo</h1>
+  {{/contentFor}}
+
+  {{#contentFor "navButtonRight"}}
+    {{> cropBtn}}
+  {{/contentFor}}
+
+  <div class="bar bar-standard bar-footer">
+    <button class="btn btn-positive btn-block retake-btn">Retake</button>
+  </div>
+
+  <div class="content">
+    <div class="canvas">
+      <img class="image-layer" src="{{ getSessionImage }}">
+      <div class="crop-layer"></div>
+    </div>
+  </div>
+</template>
