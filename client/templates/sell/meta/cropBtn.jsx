@@ -31,7 +31,7 @@ Template.cropBtn.events({
 
     if (croppedImage) {
       Session.set('croppedImage', croppedImage);
-      Router.go('upload');
+      Router.go('upload', {}, {replaceState: true});
     }
   },
 
