@@ -1,0 +1,82 @@
+<template name="profileUpdate">
+  {{#contentFor "navButtonLeft"}}
+    {{> backBtn}}
+  {{/contentFor}}
+
+  {{#contentFor "navTitle"}}
+    <h1 class="title">Update Your Profile</h1>
+  {{/contentFor}}
+
+  {{#contentFor "navButtonRight"}}
+    {{> profileUpdateBtn}}
+  {{/contentFor}}
+
+  <div class="content">
+    <div class="update-avatar">
+      <img class="avatar" src="{{ getUserAvatar currentUser}}">
+      <a href="#" class="overlay">
+        <i class="fa fa-edit"></i>
+      </a>
+    </div>
+    <ul class="table-view">
+      <li class="table-view-cell table-view-divider">Public Profile</li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-user"></i>
+        </div>
+        <div class="input">
+          {{#if currentUser.username}}
+            <input type="text" name="username" value="{{currentUser.username}}" placeholder="Username" readonly>
+          {{else}}
+            <input type="text" name="username" placeholder="Username">
+          {{/if}}
+        </div>
+      </li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-television"></i>
+        </div>
+        <div class="input">
+          <input type="text" name="name" value="{{currentUser.profile.name}}" placeholder="Display name">
+        </div>
+      </li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-info-circle"></i>
+        </div>
+        <div class="input">
+          <input type="text" name="intro" value="{{currentUser.profile.intro}}" placeholder="Introduction">
+        </div>
+      </li>
+      <li class="table-view-cell table-view-divider">Private Information</li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-envelope"></i>
+        </div>
+        <div class="input">
+          <input type="email" name="email" value="{{currentUser.emails.[0].address}}" placeholder="Email" readonly>
+        </div>
+      </li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-phone"></i>
+        </div>
+        <div class="input">
+          <input type="tel" name="phone" value="{{currentUser.profile.phone}}" placeholder="Phone">
+        </div>
+      </li>
+      <li class="table-view-cell table-view-cell-input">
+        <div class="label">
+          <i class="fa-icon fa fa-transgender"></i>
+        </div>
+        <div class="input">
+          <select name="gender">
+            <option value="null">Not specified</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
