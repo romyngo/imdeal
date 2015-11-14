@@ -7,7 +7,7 @@ Template.feed.helpers({
     return _.chain(Meteor.user().following)
             .map((userId) => Items.find({userId: userId}).map((item) => item))
             .flatten()
-            .sort((item) => item.createdAt)
+            .sort((item) => item.createdAt * -1)
             .value();
   },
 
