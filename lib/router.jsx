@@ -19,13 +19,6 @@ Router.route('/', {
   action:         defaultRender,
 });
 
-Router.route('/item', {
-  name:           'item',
-  template:       'item',
-  layoutTemplate: 'layoutNoTab',
-  action:         defaultRender,
-});
-
 Router.route('/discovery', {
   name:           'discovery',
   template:       'discovery',
@@ -62,6 +55,18 @@ Router.route('/crop', {
   template:       'crop',
   layoutTemplate: 'layoutNoTab',
   action:         defaultRender,
+});
+
+Router.route('/item/:_id', {
+  name:           'item',
+  template:       'item',
+  layoutTemplate: 'layoutNoTab',
+  action:         defaultRender,
+  data() {
+    return {
+      item: Items.findOne(this.params._id),
+    };
+  },
 });
 
 Router.route('/chat/:_id', {

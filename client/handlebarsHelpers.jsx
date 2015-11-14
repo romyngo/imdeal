@@ -9,3 +9,7 @@ UI.registerHelper('getFormattedTimestamp', function(timestamp = moment() : Date)
     sameElse : 'DD/MM/YY',
   });
 });
+
+UI.registerHelper('getFormattedPrice', function(price: int) {
+  return parseFloat(price / 100).toFixed(2);
+});

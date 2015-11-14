@@ -24,12 +24,12 @@ Template.upload.events({
       description:  event.target.description.value,
     };
 
-    Items.insert(newItemEntry, (error) => {
+    Items.insert(newItemEntry, (error, itemId) => {
       if (error) {
         return console.error('Cannot make new item entry:\n' + error);
       }
-      console.log('It worked!');
-      Router.go('item');
+      console.log('It worked: ' + itemId);
+      Router.go('item', {_id: itemId});
     });
   },
 
