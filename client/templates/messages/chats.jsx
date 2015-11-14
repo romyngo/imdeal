@@ -7,8 +7,8 @@ Template.chats.helpers({
     return Chats.find({
       toUserId: Meteor.userId(),
     }, {
-      $sort: { timestamp: -1 },
-      $limit: limit,
+      sort: { timestamp: -1 },
+      limit: limit,
     });
   },
 
