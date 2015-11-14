@@ -63,6 +63,8 @@ h1, h2, h3, h4, h5, p {
   position: absolute;
   padding: 5px 10px;
   font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .img-responsive {
@@ -115,15 +117,11 @@ h1, h2, h3, h4, h5, p {
       .price {
         right: 0;
         top: 0;
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
       }
 
       .name {
         left: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
       }
     }
 
@@ -174,6 +172,21 @@ h1, h2, h3, h4, h5, p {
     float: left;
     width: 33%;
     margin: 1px 0;
+    position: relative;
+
+    .price {
+      top: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .name {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
 
     &:nth-child(3n+2) {
       margin: 1px;
