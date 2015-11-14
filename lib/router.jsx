@@ -31,9 +31,16 @@ Router.route('/chats', {
   action:         defaultRender,
 });
 
-Router.route('/profile', {
-  name:           'profile',
+Router.route('/profile/view', {
+  name:           'profile.view',
   template:       'profile',
+  action:         defaultRender,
+});
+
+Router.route('/profile/update', {
+  name:           'profile.update',
+  template:       'profileUpdate',
+  layoutTemplate: 'layoutNoTab',
   action:         defaultRender,
 });
 
