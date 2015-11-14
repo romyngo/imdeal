@@ -3,7 +3,7 @@
 // Constants for initialisation
 const constants = {
   DEF_LANG   : 'en_US',
-  DEF_AVATAR : 'img/100x100.png',
+  DEF_AVATAR : '/img/no_avatar.png',
 };
 
 // Enables the modification of the Accounts.User collection on creation of new users
