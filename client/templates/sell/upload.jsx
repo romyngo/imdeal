@@ -29,7 +29,7 @@ Template.upload.events({
         return console.error('Cannot make new item entry:\n' + error);
       }
       console.log('It worked: ' + itemId);
-      Router.go('item', {_id: itemId});
+      Router.go('item', {_id: itemId}, {replaceState: true});
     });
   },
 
