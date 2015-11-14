@@ -10,42 +10,62 @@
 
   <div class="content">
     <form class="input-group upload-form">
-      <div class="item-upload">
-        <div class="item-basic padding">
-          <div class="image">
-            <img class="img-responsive thumbnail" src="{{ getSessionImage }}">
+      <div class="upload-item-photo">
+        <img class="thumbnail" src="{{ getSessionImage }}">
+      </div>
+      <ul class="table-view">
+        <li class="table-view-cell table-view-divider">Basic Information</li>
+        <li class="table-view-cell table-view-cell-input">
+          <div class="label">
+            <i class="fa-icon fa fa-tag"></i>
           </div>
-          <div class="name">
-            <h4 class="label">Basic Information</h4>
-            <input type="text" name="name" placeholder="Enter item name">
-            <input type="text" name="location" placeholder="Enter item location">
-            <input type="number" name="price" placeholder="Enter price">
+          <div class="input">
+            <input type="text" name="name" placeholder="Item name">
           </div>
-        </div>
-        <div class="item-optional padding">
-          <h4 class="label">Optional Information</h4>
-          <textarea name="description" placeholder="Enter description" rows="5"></textarea>
-        </div>
-        <div class="item-social-share padding">
-          <h4 class="label">Share</h4>
-          <ul class="table-view">
-            <li class="table-view-cell">
-              <i class="fa-icon fa fa-facebook"></i>
-              Facebook
-              <div class="toggle active">
-                <div class="toggle-handle"></div>
-              </div>
-            </li>
-            <li class="table-view-cell">
-              <i class="fa-icon fa fa-instagram"></i>
-              Instagram
-              <div class="toggle active">
-                <div class="toggle-handle"></div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <button type="submit" class="btn btn-positive btn-block btn-submit">Submit</button>
+        </li>
+        <li class="table-view-cell table-view-cell-input">
+          <div class="label">
+            <i class="fa-icon fa fa-usd"></i>
+          </div>
+          <div class="input">
+            <input type="number" name="price" placeholder="Price">
+          </div>
+        </li>
+        <li class="table-view-cell table-view-divider">Optional Information</li>
+        <li class="table-view-cell table-view-cell-input">
+          <div class="label">
+            <i class="fa-icon fa fa-map-marker"></i>
+          </div>
+          <div class="input">
+            <input type="text" name="location" placeholder="Location">
+          </div>
+        </li>
+        <li class="table-view-cell table-view-cell-input">
+          <div class="label">
+            <i class="fa-icon fa fa-info-circle"></i>
+          </div>
+          <div class="input">
+            <textarea name="description" placeholder="Description" rows="5"></textarea>
+          </div>
+        </li>
+        <li class="table-view-cell table-view-divider">Share</li>
+        <li class="table-view-cell">
+          <i class="fa-icon fa fa-facebook"></i>
+          Facebook
+          <div class="toggle active">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+        <li class="table-view-cell">
+          <i class="fa-icon fa fa-instagram"></i>
+          Instagram
+          <div class="toggle active">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="padding">
+        <button type="submit" class="btn btn-positive btn-block submit-btn">Submit</button>
       </div>
     </form>
   </div>
