@@ -8,6 +8,7 @@ Meteor.publish(null, function() {
       numFollowing: 1,
       numPosts:     1,
       listings:     1,
+      following:    1,
     },
   });
 });
