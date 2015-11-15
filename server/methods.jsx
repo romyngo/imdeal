@@ -24,4 +24,15 @@ Meteor.methods({
     return docsUpdated;
   },
 
+  // Given a new message and chat ID, adds that message to the chats
+  addNewMessageToChat(chatId : string, message : Object) {
+    Chats.update(chatId, {
+      $push: { messages: message },
+    }, (error) => {
+      if (error) {
+        throw error;
+      }
+    });
+  },
+
 });
