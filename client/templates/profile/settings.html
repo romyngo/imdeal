@@ -23,28 +23,28 @@
         </a>
       </li>
       <li class="table-view-cell table-view-divider">Automatic Sharing</li>
-      <li class="table-view-cell">
+      <li class="table-view-cell toggle-facebook">
         <i class="fa-icon fa fa-facebook"></i>
         Facebook
         {{#if currentUser.settings.facebookShare}}
-          <div class="toggle active toggle-facebook">
+          <div class="toggle active">
             <div class="toggle-handle"></div>
           </div>
         {{else}}
-          <div class="toggle toggle-facebook">
+          <div class="toggle">
             <div class="toggle-handle"></div>
           </div>
         {{/if}}
       </li>
-      <li class="table-view-cell">
+      <li class="table-view-cell toggle-instagram">
         <i class="fa-icon fa fa-instagram"></i>
         Instagram
         {{#if currentUser.settings.instagramShare}}
-          <div class="toggle active toggle-instagram">
+          <div class="toggle active">
             <div class="toggle-handle"></div>
           </div>
         {{else}}
-          <div class="toggle toggle-instagram">
+          <div class="toggle">
             <div class="toggle-handle"></div>
           </div>
         {{/if}}

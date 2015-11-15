@@ -2,18 +2,13 @@
 
 Template.settings.events({
 
-  // Callback to handle toggle change
-  'click .toggle': function(event) {
-    event.preventDefault();
-  },
-
   // Callback for logout button
   'click .logout-btn': function(event) {
     event.preventDefault();
     AccountsTemplates.logout();
   },
 
-  // Callback for social network toggle buttons
+  // Callbacks for social network toggle buttons
   'click .toggle-facebook':   (event) => toggleButtonEvent(event, 'facebookShare'),
   'click .toggle-instagram':  (event) => toggleButtonEvent(event, 'instagramShare'),
 
