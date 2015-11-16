@@ -29,6 +29,12 @@ Template.upload.events({
         return console.error('Cannot make new item entry:\n' + error);
       }
       console.log('It worked: ' + itemId);
+
+      // Remove captured photos from Session
+      Session.set('originalImage', null);
+      Session.set('croppedImage', null);
+
+      // Go to view item
       Router.go('item', {_id: itemId}, {replaceState: true});
     });
   },

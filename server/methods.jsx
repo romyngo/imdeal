@@ -1,6 +1,15 @@
 'use strict';
 
 Meteor.methods({
+  // Update user profile
+  updateProfile(userEntry : Object) {
+    const docsUpdated = Meteor.users.update(this.userId, {$set: userEntry});
+
+    if (docsUpdated !== 1) {
+      throw new Meteor.Error(500, 'User document cannot be updated.');
+    }
+    return docsUpdated;
+  },
 
   // Update social network sharing options for users
   toggleSharingOption(networkName : string, newStatus : boolean) {
