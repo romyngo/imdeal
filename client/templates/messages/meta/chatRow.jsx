@@ -17,6 +17,7 @@ Template.chatRow.helpers({
     const item = Items.findOne(itemId);
 
     return {
+      name:  item.name,
       image: item.picture,
     };
   },

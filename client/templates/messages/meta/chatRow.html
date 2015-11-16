@@ -1,11 +1,12 @@
 <template name="chatRow">
   <a href="{{pathFor route='chat'}}" class="item padding">
-    {{#with  user=(getUserData fromUserId) chat=this}}
+    {{#with  user=(getUserData fromUserId) item=(getItemData chat.itemId)}}
       <div class="user">
         <img class="avatar" src="{{user.avatar}}">
       </div>
 
       <div class="message">
+        <p class="itemname">{{item.name}}</p>
         <p class="username">{{user.username}}</p>
         {{#with getLastMessage}}
           <p class="body">{{this.text}}</p>
@@ -13,11 +14,9 @@
         {{/with}}
       </div>
 
-      {{#with item=(getItemData chat.itemId)}}
-        <div class="product">
-          <img class="thumbnail" src="{{item.image}}">
-        </div>
-      {{/with}}
+      <div class="product">
+        <img class="thumbnail" src="{{item.image}}">
+      </div>
     {{/with}}
   </a>
 </template>
