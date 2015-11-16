@@ -12,6 +12,10 @@ Template.chat.helpers({
     };
   },
 
+  getItemName() {
+    return Items.findOne(Template.currentData().chat.itemId).name || 'Chat';
+  },
+
   // Returns all messages of this chat, limited to amount specified
   getLimitedMessages(limit = 10 : number) {
     return Template.currentData().chat.messages.splice(0, limit);
