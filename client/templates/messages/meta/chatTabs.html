@@ -1,8 +1,13 @@
 <template name="chatTabs">
   <div class="bar bar-standard bar-header-secondary">
     <div class="segmented-control">
-      <a class="control-item active buying-tab" href="#">Buying</a>
-      <a class="control-item selling-tab" href="#">Selling</a>
+      {{#if isBuyingShown}}
+        <a class="control-item active buying-tab" href="#">Buying</a>
+        <a class="control-item selling-tab" href="#">Selling</a>
+      {{else}}
+        <a class="control-item buying-tab" href="#">Buying</a>
+        <a class="control-item active selling-tab" href="#">Selling</a>
+      {{/if}}
     </div>
   </div>
 </template>

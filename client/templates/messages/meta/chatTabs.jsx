@@ -18,6 +18,10 @@ Template.chatTabs.events({
     Session.set('showBuyingChats', false);
   },
 
+  isBuyingShown() {
+    return Session.get('showBuyingChats');
+  },
+
 });
 
 // General function to switch active class on buying/selling buttons
